@@ -1,0 +1,5 @@
+logical effort: d = g*h*b+p
+g irrelavant to actual sizing
+h relavant to actual sizing
+b = (on_path+off_path)/on_path
+
