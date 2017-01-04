@@ -1,5 +1,19 @@
+1
 logical effort: d = g*h*b+p
 g,p irrelavant to actual sizing, only relavant to the gate itself (unit sizing)
 h relavant to actual sizing
 b = (on_path+off_path)/on_path
 
+2
+setup time: t_clk > t_clk-q + t_logic + t_su + |t_cu|
+            long path
+            fix: increase cycle time
+            
+hold time:  t_hold + |t_cu| < t_clk-q,cd + t_logic_cd
+            short path
+            fix: insert buffers
+
+race margin = t_clk-q,cd + t_logic,cd - t_hold
+
+
+            
