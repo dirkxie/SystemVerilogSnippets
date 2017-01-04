@@ -10,8 +10,8 @@ module FIFO_sync (
   output logic [3:0] fifo_counter // number of data in buffer
 );
 
-reg [2:0] rd_ptr, wr_ptr; // read, write pointer 
-reg [7:0] buf_mem [3:0];  // memory
+logic [2:0] rd_ptr, wr_ptr; // read, write pointer 
+logic [7:0] buf_mem [3:0];  // memory
 
 always_comb begin
   buf_empty = (fifo_counter == 0);
