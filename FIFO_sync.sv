@@ -1,4 +1,4 @@
-module syn_fifo (
+module FIFO_sync (
   input              clk,
   input              rst,
   input              wr_en,   // write enable
