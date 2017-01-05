@@ -20,3 +20,14 @@ module GrayCounter
                        BinaryCount[COUNTER_WIDTH-2:0] ^ BinaryCount[COUNTER_WIDTH-1:1]}; 
     end
 endmodule
+
+module GrayToBinaryConverter (
+  input        [4:0] GrayCode,
+  output logic [4:0] BinaryCode
+);
+  assign BinaryCode[4] = GrayCode[4];
+  assign BinaryCode[3] = GrayCode[4] ^ GrayCode[3];
+  assign BinaryCode[2] = GrayCode[4] ^ GrayCode[3] ^ GrayCode[2];
+  assign BinaryCode[1] = GrayCode[4] ^ GrayCode[3] ^ GrayCode[2] ^ GrayCode[1];
+  assign BinaryCode[0] = GrayCode[4] ^ GrayCode[3] ^ GrayCode[2] ^ GrayCode[1] ^ GrayCode[0];
+endmodule
